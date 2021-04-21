@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+	<link rel="stylesheet" href="static/style1.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<!--NAVBAR START-->
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Covid_Resources_Nagpur</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="navbar-brand" href="/">🏡 Home
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand" href="#">📓 Helpline</a>
+        </li>
+       <li class="nav-item dropdown">
+      <a class="navbar-brand dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Developer</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">📋 Report Bug</a>
+      
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">👽 Comming soon</a>
+      </div>
+    </li>
+        <li class="nav-item dropdown">
+      <a class="navbar-brand dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> 🏷️ Sign In</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" data-toggle="modal" role="button" id="Loginbutton" href="#LoginModal">🔐 Login</a>  
+        <a class="dropdown-item" data-toggle="modal" role="button" id="Registrationbutton" href="#RegistrationModal"> 🔐 Registration</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="admin">🧔🏻 Admin</a>
+      </div>
+    </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--NAVBAR END-->
+
+<div class="pad">
+</div>
+<style>.pad {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+</style>
+
+
+<!--alert start here-->
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+  {{message}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endfor %}
+{% endif %}
+<!--alert end here-->                      
+
+
+
+
+<!-- Page Content -->
+<section class="py-5">
+  <div class="container">
+    <h3 class="display-4">  COVID Beds Status </h3>
+    <p class="lead">  </p>
+    <p class="lead">  	<a href="https://github.com/shantanu1905">  </a> <br>
+        <a style="color: rgb(33, 118, 197);"> </a></p>
+    
+  </div>
+
+</section>
+<div class="container" ; content="center">
+<form method="post" name="ecom">
+       <!--  <input type="hidden" id="hospital" value="kunal">  -->
+      <div class="row ">
+      
+        <div class="col-lg-12 form-group">
+
+                <label>Select Hospital</label>
+        <select name="hosp_name" id="hosp_name" class="form-control" onchange="getHospital();">
+          <option>All Hospitals</option>
+          <option>GMC</option>
+<option>IGGMC</option>
+<option>AIIMS Hospital</option>
+<option>Indira Gandhi Rugnalaya Gandhi Nagar</option>
+<option>Isolation Hospital Imamwada</option>
+<option>Ayush Hopital (NMC Sadar)</option>
+<option>Pachpaoli DCHC Center</option>
+<option>Lata Mangeshkar Hospital Hingna (S.G.)</option>
+<option>Lata Mangeshkar Hospital Sitabuldi (S.G.)</option>
+<option>Shalinitai Meghe Hospital (S.G.)</option>
+<option>Orange City Hospital</option>
+<option>CIIMS Hospital</option>
+<option>Treat Me Hospital</option>
+<option>Kalpavruksha Hospital</option>
+<option>Grace Ortho Hospital</option>
+<option>Nucleus Mother and Child Hospital</option>
+<option>Swasthyam Superspeciality Hospital</option>
+<option>Maxcare Hospital</option>
+<option>S S Multispeciality Hospital</option>
+<option>Crescent Hospital &amp; Heart Center</option>
+<option>Athaayu Multispeciality Hospital</option>
+<option>Central India Cardiology Hospital</option>
+<option>Sanjeevani Hospital (Laxminagar)</option>
+<option>Wockhardt Hospita Gandhi Nagar</option>
+<option>Wockhardt Hospital Shankar Nagar</option>
+<option>Viveka Superspeciality Hospital</option>
+<option>Meditrina Hospital</option>
+<option>Ganga Care Hospital</option>
+<option>Sushrut Hospital</option>
+<option>Ayushman Hospital</option>
+<option>Respira Hospital</option>
+<option>Sunflower Hospital</option>
+<option>Sengupta Hospital</option>
+<option>Krims Hospital</option>
+<option>Swastik Critical Care</option>
+<option>Medigrace Hospital</option>
+<option>Shraman Hospital</option>
+<option>Aditya hospital</option>
+<option>Zenith Hospital</option>
+<option>Central Neurological &amp; Medical Institute</option>
+<option>G.B. Multicare Hospital</option>
+<option>Dande Hospital</option>
+<option>Mure Memorial Hospital</option>
+<option>Kalamkar Multispeciality Hospital</option>
+<option>Asian Kidney Hospital and Medical Center</option>
+<option>Raut Nursing Home</option>
+<option>Center Point Hospital</option>
+<option>Aureus Hospital</option>
+<option>Keshav Hospital</option>
+<option>Aastha Critical Care Hospital</option>
+<option>Shri Saikripa Hospital</option>
+<option>Star City Hospital</option>
+<option>Vighnharta Hospital</option>
+<option>Green City Nursing Home</option>
+<option>Itkelwar Multispeciality Hospital</option>
+<option>Gaikwad Critical Care Center</option>
+<option>Neuron Hospital</option>
+<option>Gatewell Hospital</option>
+<option>Suretech Hospital</option>
+<option>Avanti Heart institute</option>
+<option>Shrikrishna Hrudayalaya</option>
+<option>G. T. Padole Hospital</option>
+<option>Columbia Hospital</option>
+<option>Nelson Mother &amp; Child Care Hospital</option>
+<option>Criticare Hospital</option>
+<option>Arneja Institute of Cardiology</option>
+<option>NIMS Hospital</option>
+<option>Shivganga Hospital </option>
+<option>Cancer Clinic</option>
+<option>Raghuwanshi Hospital &amp; Research Center</option>
+<option>Cure it Hospital</option>
+<option>Shree Hospital</option>
+<option>Wanjari Hospital </option>
+<option>Gracious Hospital</option>
+<option>Suryodaya Hospital</option>
+<option>Borkar Multispeciality Hospital</option>
+<option>Shravan Hospital</option>
+<option>Nandanwar Trauma Center</option>
+<option>Esha Hospital</option>
+<option>Evershine Hospital</option>
+<option>Sawarkar Multispeciality Hospital</option>
+<option>Central Avenue Critical Care Hospital</option>
+<option>Safe Hands Hospital</option>
+<option>Radiance Hospital</option>
+<option>Seven Star Hospital</option>
+<option>Shri Radhakrishna Hospital</option>
+<option>New Era (East End) Hospital</option>
+<option>Ramdeobaba Hospital</option>
+<option>Kubde Hospital</option>
+<option>Tarangan Hospital</option>
+<option>Aastha Hospital (Bhandara road)</option>
+<option>VIIMS Hospital</option>
+<option>Shri Bhavani Hospital</option>
+<option>Samarpan Hospital</option>
+<option>Venus Hospital</option>
+<option>Nimbunabai Tirpude Hospital</option>
+<option>Rugwani Child Care Center &amp; Hospital</option>
+<option>Gajbe Critical Care &amp; Multispeciality</option>
+<option>Hope Hospital</option>
+<option>Kunal Hospital</option>
+<option>Kingsway Hospital</option>
+<option>Alexis Hospital</option>
+<option>Medicare Hospital</option>
+<option>Auro Fracture &amp; Accident Hospital</option>
+<option>Dr. A. Badar Surgical Nurshing Home</option>
+<option>Niramay Hospital</option>
+<option>Shanti Mohan Hospital</option>
+<option>Prime Nursing Home</option>
+<option>Pioneer Nursing Home</option>
+<option>Sanjeevani Hopital &amp; Maternity Nursing </option>
+<option>Lifesprings Hospital</option>
+<option>Central Hospital Ramdaspeth</option>
+<option>Kothari Hospital</option>
+<option>Mother and Child Care Hospital</option>
+<option>Belsare Hospital</option>
+<option>Surelife Hospital &amp; Research Institute</option>
+<option>Safal Hospital</option>
+<option>Rahate Nursing Home</option>
+<option>Prestige Hospital</option>
+<option>Dande Hospital Hill Road</option>
+<option>Crystal Nursing Home</option>
+<option>New Health City Childrens Superspeciality Hospital &amp; Research Center</option>
+<option>Khalatkar Bal Rugnalaya</option>
+<option>Shanti Niketan Nursing Home</option>
+<option>Life Care Hospital</option>
+<option>Gencure Hospital</option>
+<option>Godani Hospital</option>
+<option>Shri Dhanwantari Hospital</option>
+<option>Adishakti Hospital</option>
+<option>Asian Hospital &amp; Critical Care</option>
+<option>Carewell Hospital</option>
+<option>Platina Heart Hospital</option>
+<option>RNH Hospital Pvt. Ltd.</option>
+<option>Sud Surgical &amp; Maternity Hospital</option>
+<option>Hotel Center Point</option>
+<option>Midas Multispeciality Hospital Pvt. Ltd.</option>
+<option>New Life Hospital (Unit of ChhajedHealthcare Pvt. Ltd.)</option>
+<option>Ortho Avenue Hospital</option>
+<option>Sigma Hospital (Run by Jeswani Multispecialty Hospital)</option>
+<option>Agrawal Hospital</option>
+<option>Nandita Hospital &amp; Research Centre</option>
+<option>Orthonova Hospital &amp; Critical Care Unit</option>
+<option>Deshmane Hospital</option>
+<option>Sneh Nursing Home</option>
+<option>Nalin Hospital</option>
+<option>Akruti Hospital</option>
+<option>SST. Madnani Hospital &amp; Nursing Home</option>
+
+        </select>
+        </div>
+      </div>
+      </form>
+</div>
+
+<style>.pad {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+</style>
+
+<div class="container">
+<div class="row">
+ 
+  <div class="col-sm-3">
+    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">O<sub>2</sub> Beds</div>
+  <div class="card-body">
+    <h5 class="card-title">Available : 0</h5>
+    <h5 class="card-title">Occupied : 0</h5>
+  </div>
+</div>
+  </div>
+
+   <div class="col-sm-3">
+    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+  <div class="card-header">Non O<sub>2</sub> Beds</div>
+  <div class="card-body">
+    <h5 class="card-title">Available : 0</h5>
+    <h5 class="card-title">Occupied : 0</h5>
+  </div>
+</div>
+  </div>
+
+
+
+
+<div class="col-sm-3">
+    <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+  <div class="card-header">ICU Beds</div>
+  <div class="card-body">
+   <h5 class="card-title">Available : 0</h5>
+  <h5 class="card-title">Occupied : 0</h5>
+  </div>
+</div>
+  </div>
+
+  
+  <div class="col-sm-3">
+    <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+  <div class="card-header">Ventilators</div>
+  <div class="card-body">
+    <h5 class="card-title">Available : 0</h5>
+    <h5 class="card-title">Occupied : 0</h5>
+  </div>
+</div>
+  </div>
+
+
+  
+  </div>
+</div>
+</div>
+
+<hr style="height:1px; width:50% ;border-width:0; color:gray; background-color:gray">
+
+
+
+
+
+ <!--Contact form start-->
+<div id="mybutton">
+<a  class="feedback" href="#myModal"  data-toggle="modal" role="button" >🤙 Contact me </a>
+</div>
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+
+        <h3 class="lead" id="myModalLabel">Hire me as Python developer. you can see my work on my Github profile. </h3>
+      </div>
+      <div class="modal-body">
+        <form id="contact" method="post" class="form" role="form" action="/">
+           {% csrf_token %}
+          <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text" name="name" required></div>
+          <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual" name="msg" required></textarea></div>
+          <div class="form-group"><label>E-Mail</label><input class="form-control email" placeholder="email@you.com (so that we can contact you)" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text" name="email" required></div>
+          
+          <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <p class="help-block pull-left text-danger hide" id="form-error">  The form is not valid. </p></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--Contact form end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="py-4 bg-dark flex-shrink-0">
+    <div class="container text-center">
+    <div class="icon-bar">
+    <a href="https://github.com/shantanu1905"><img alt="Github" src="static/images/github.svg" width="30" height="30" ></a> 
+    <a href="https://www.linkedin.com/in/shantanu-nimkar-4a50961a6/"><img  alt="linkedin" src="static/images/linkedinn.svg" width="30" height="30"></a> 
+    <a href="#"><img alt="twitter" src="static/images/twitter.svg" width="30" height="30" ></a> 
+    <a href="#"><img alt="spotify" src="static/images/spotify1.svg" width="30" height="30" ></a> 
+  </div>
+  <p class="lead"  style="font-size:20px ;color:white" >Made with ❤ by Ghostpy 😉 </p> 
+  <p class="lead"  style="font-size:15px ;color:gray" >© 2020-2021 </p>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+ 
+
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src=""></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
